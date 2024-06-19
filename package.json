@@ -6,15 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint src --max-warnings=0",
-    "format": "prettier --write .",
-    "test": "jest --maxWorkers=50%",
-    "test:watch": "jest --watch --maxWorkers=25%",
-    "generate": "yarn plop --plopfile ./generators/plopfile.js",
-    "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -s ./public"
+    "build-stats": "cross-env ANALYZE=true npm run build",
+    "export": "next export",
+    "build-prod": "run-s clean build export",
+    "clean": "rimraf .next out",
+    "lint": "next lint",
+    "build-types": "tsc --noEmit --pretty",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.2.4",
+    "@types/lodash": "^4.17.5",
     "next": "12.0.9",
     "next-pwa": "^5.4.4",
     "react": "17.0.2",
@@ -27,6 +29,10 @@
     "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@gsap/react": "^2.1.1",
+    "@mui/material": "^5.15.18",
     "@storybook/addon-essentials": "^6.4.14",
     "@storybook/addon-links": "^6.4.14",
     "@storybook/react": "^6.4.14",
@@ -51,14 +57,21 @@
     "jest": "^27.4.7",
     "jest-styled-components": "^7.0.8",
     "lint-staged": ">=12.3.2",
+    "lodash": "^4.17.21",
     "plop": "^3.0.5",
-    "prettier": "2.5.1",
     "typescript": "^4.5.5",
-    "typescript-plugin-styled-components": "^2.0.0"
+    "typescript-plugin-styled-components": "^2.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.5",
+    "prettier": "^3.2.5",
+    "rimraf": "^3.0.2"
+  },
+  "engines": {
+    "npm": ">=10.1.0",
+    "node": ">=20.9.0"
   },
   "lint-staged": {
     "src/**/*": [
-      "yarn lint --fix",
       "yarn test --findRelatedTests --bail"
     ]
   }

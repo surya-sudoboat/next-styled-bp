@@ -1,9 +1,18 @@
-const withPWA = require('next-pwa')
-const isProd = process.env.NODE_ENV === 'production'
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+  output: 'export',
+  compress: true,
 
-module.exports = withPWA({
-  pwa: {
-    dest: 'public',
-    disable: !isProd,
-  },
-})
+  // Optional: Change links `/me` -> `/me/` and emit `/me.html` -> `/me/index.html`
+  // trailingSlash: true,
+
+  // Optional: Prevent automatic `/me` -> `/me/`, instead preserve `href`
+  // skipTrailingSlashRedirect: true,
+
+  // Optional: Change the output directory `out` -> `dist`
+  // distDir: 'dist',
+}
+
+module.exports = nextConfig

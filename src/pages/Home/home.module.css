@@ -1,0 +1,619 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  max-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  overflow: hidden; /* Ensure no scrollbars are visible */
+}
+
+.firstDiv, .secondDiv, .thirdDiv,.fourthDiv {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white; /* Ensure it covers the first div */
+  z-index: 1; /* Ensure it covers the first div */
+}
+
+.firstDiv {
+  /* background-color: lightblue; 
+  font-size: 34px; 
+  font-weight: bold;  */
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  opacity: 1; 
+}
+
+
+.secondDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fdfaff;
+  height: 100%;
+  transform: translateY(100%);
+}
+.thirdDiv {
+  transform: translateY(100%); 
+}
+
+
+
+.fourthDiv{
+  background-color: #fdfaff; 
+  transform: translateY(100%); 
+  opacity: 1; 
+  overflow:auto;
+}
+.slideUp {
+  display: flex;
+
+  animation: slideUpAnimation 1s ease forwards; 
+}
+
+@keyframes ZoomIn { 
+  0% {
+    transition: 0.5s;
+    transform: translateY(5%);
+  }
+
+  100% {
+    transition: 0.5s;
+    transform: translateY(0%);
+  }
+};
+
+.mainconatiner{
+  animation-duration:1s;
+ animation-name:  ZoomIn;
+  animation-timing-function: ease;
+}
+@keyframes showup{
+  0% {
+    transition: 0.1s;
+    transform: translateY(100%);
+  }
+
+  100% {
+    transition: 0.1s;
+    transform: translateY(0%);
+  }
+};
+
+.animatestring1{
+  animation-timing-function: ease;
+  animation-duration: 2s;
+  animation-name:showup;
+}
+
+@keyframes ImageholdAnimate{
+  0% {
+    transition: 0.1s;
+    transform: translateY(50%);
+  }
+
+  100% {
+    transition: 0.1s;
+    transform: translateY(0%);
+  }
+};
+
+.animatestring2{
+  animation-timing-function: ease;
+  animation-duration: 3s;
+  animation-name:ImageholdAnimate;
+}
+
+
+.animatestring3{
+  animation-timing-function: ease;
+  animation-duration: 3.5s;
+  animation-name:ImageholdAnimate;
+}
+
+@keyframes mockimgAnimate{
+  0% {
+    transition: 0.5s;
+    transform: translateY(200%);
+  }
+
+  100% {
+    transition: 0.5s;
+    transform: translateY( 0%);
+  }
+};
+
+
+
+.animatemobile{
+  animation-duration: 4s;
+
+  animation-name: mockimgAnimate;
+  animation-timing-function: ease;
+}
+
+
+.slideDown {
+  display: flex;
+  animation: slideDownAnimation 1s ease forwards;
+}
+
+.fadeOutFirst{
+  display: flex;
+  animation: fadeOutAnimationCard 1s ease forwards;
+}
+
+
+
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(100%); 
+    border-radius: 100px;
+    opacity: 1; 
+  }
+  to {
+    transform: translateY(0);
+    border-radius: 0;
+    opacity: 1; 
+  }
+}
+@keyframes CardslideUpAnimation {
+  from {
+    transform: translateY(230%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+}
+
+@keyframes CardslideUpAnimationMobile {
+  from {
+    transform: translateY(100%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+}
+
+
+
+@keyframes CardslideUpAnimation2 {
+  from {
+    transform: translateY(100%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(0);
+    opacity: 0.3; 
+  }
+}
+
+@keyframes CardslideUpAnimationVisible {
+  from {
+    transform: translateY(250%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+}
+
+@keyframes slideDownAnimation {
+  from {
+    transform: translateY(0); 
+    border-radius: 0;
+    opacity: 1; 
+  }
+  to {
+    transform: translateY(100%); 
+    opacity: 1;
+    border-radius: 100px; 
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  height: 60%;
+  background: white;
+}
+
+.leftContent, .rightContent {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  width: 50%;
+  align-items: center;
+}
+.leftContent{
+  z-index:10;
+  gap:230px;
+  justify-content: center;
+  
+}
+@media only screen and (max-width: 399px){
+.rightContent{
+  height: 155px !important;
+}
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1440px) {
+  .leftContent{
+    width:800px;
+    gap:100px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .leftContent{
+  gap:70px !important;
+  width:700px !important;
+  }
+}
+  @media only screen and (min-width: 1441px) and (max-width: 1600px) {
+    .leftContent{
+      width:800px;
+      gap:100px;
+    }
+  }
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+  .leftContent {
+    gap:50px;
+  width:600px !important;
+  }
+}
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .leftContent {
+    gap: 100px;
+    width:700px !important;
+  }
+}
+
+.contentItem {
+  display: none;
+  z-index: 1;
+  width:100%;
+  gap:24px;
+  height: 48%;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+@keyframes slideUpAnimationContent {
+  from {
+    transform: translateY(0); 
+    opacity: 0.5; 
+  }
+  to {
+    transform: translateY(-40%);
+    opacity: 0; 
+  }
+}
+
+@keyframes slideDownAnimationContent {
+  from {
+    transform: translateY(25%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0; 
+  }
+}
+
+.fadeOutFirst{
+  display: flex;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: slideUpAnimationContent 1s ease backwards; 
+}
+
+.fadeOutLast{
+  display: flex;
+  position: absolute;
+  top: 54%;
+  z-index: 1;
+  opacity: 0;
+  animation: slideDownAnimationContent 1s ease backwards; 
+}
+
+.firstContentUp{
+  display: flex;
+  z-index: 2;
+  animation: CardslideUpAnimation 1s ease forwards;
+  @media screen  and (max-width: 991px) {
+    animation: CardslideUpAnimationMobile 1s ease forwards;
+   }
+
+}
+
+@keyframes animatedFirst{
+
+  0%{
+
+    opacity:1;
+    color: rgba(89, 16, 166, 1) ;
+    background-color: rgba(160, 73, 252, 0.2);
+      }
+      50%{
+        opacity:0.5;
+      }
+  
+      100%{
+        color: white ;
+        background-color: rgba(160, 73, 252, 0.2);
+        opacity:1;
+      }
+    }
+
+    @keyframes animatedFirstLogo{
+
+      0%{
+    
+        opacity:1;
+        background-color: rgba(253, 250, 255, 0.05);
+
+          }
+          50%{
+            opacity:0.5;
+          }
+      
+          100%{
+            background-color: rgb(253 253 253 / 0%);
+            opacity:1;
+          }
+        }
+
+.handledanimation{
+  animation: animatedFirst 1s ease forwards !important;
+}
+.handledanimationLogo{
+  animation: animatedFirstLogo 1s ease forwards !important;
+}
+.secondContentUp{
+  display: flex;
+  animation: CardslideUpAnimation2 1s ease forwards;
+}
+.secondContentUpVisible{
+  display: flex;
+  animation: CardslideUpAnimationVisible 1s ease forwards;
+}
+
+@keyframes CardslideDownAnimation1 {
+  from {
+    transform: translateY(-50%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1; 
+  }
+}
+
+@keyframes CardslideDownAnimation2 {
+  from {
+    transform: translateY(-200%); 
+    opacity: 0.6; 
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 0.3; 
+  }
+}
+
+@keyframes CardslideDownAnimation2Mobile {
+  from {
+    transform: translateY(-100%); 
+    opacity: 0.6; 
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 0.3; 
+  }
+}
+
+.firstContentDown{
+  display: flex;
+  z-index: 2;
+  animation: CardslideDownAnimation1 1s ease forwards;
+}
+
+.secondContentDown{
+  display: flex;
+  animation: CardslideDownAnimation2 1s ease forwards;
+  @media screen  and (max-width: 991px) {
+   animation: CardslideDownAnimation2Mobile 1s ease forwards;
+  }
+  
+
+}
+
+
+
+.imageItem {
+  display: none;
+  height: 100%;
+  width: 100%;
+  font-size: 44px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 3s ease-in-out, transform 5s ease-in-out;
+}
+/* .visibleimage{
+  display: flex;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+} */
+
+.visibleimage {
+  display: block;
+	-webkit-animation: fade-in 1s ease-in both;
+	        animation: fade-in 1s ease-in both;
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-6-9 7:28:29
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+@keyframes fadeImage {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+/*----------------------------------------------------------------*/
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-6-9 17:27:17
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.fade-out-top {
+	-webkit-animation: fade-out-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: fade-out-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2024-6-9 17:27:46
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-out-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+.bottomVisibleContainer{
+  @media screen  and (max-width: 991px) {
+    top:-40px;
+    border-top-right-radius:4pc !important ;
+    border-top-left-radius:4pc !important ;
+    transform: translateY(100%);
+  }
+  
+}
+.bottomNotVisibleContainer{
+  @media screen  and (max-width: 991px) {
+    top:0px ;
+  }
+}

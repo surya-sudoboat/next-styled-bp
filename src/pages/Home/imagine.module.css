@@ -1,0 +1,397 @@
+.container{
+  display: flex;
+  position: relative;
+  width:100%;
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.title {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 2s ease, opacity 1s ease;
+  @media only screen and (max-width: 991px){
+      display:none;
+    }
+}
+
+.animatePic{
+@media only screen and (max-width: 479px) {
+animation-duration: 1s;
+animation-timing-function: ease;
+animation-name: TitleZoomin;
+}
+}
+
+.titleCenter {
+  transform: translate(-50%, -50%);
+  @media only screen and (max-width: 991px){
+      display:none;
+    }
+}
+
+
+@keyframes goToUp {
+  from {
+      transform: translate(-50%, calc(43vh - 40px - 100px));
+      opacity: 1;
+  }
+  to {
+      transform: translate(-50%, -80%);
+      opacity: 0.5;
+  }
+}
+
+
+@keyframes goToDown {
+  from {
+      transform: translate(-50%, -30vh);
+      opacity:0.5;
+  }
+  to {
+      transform: translate(-50%, 50%);
+      opacity: 1;
+  }
+}
+
+.titleTop {
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  animation: goToUp 1s ease forwards;
+}
+
+.goTitleToDown {
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: goToDown 1s ease forwards;
+}
+
+/*---------- card cont -----------*/
+@keyframes goToUpCardOne {
+  from {
+      transform: translate(-50%, 100%);
+      opacity: 0.5;
+  }
+  to {
+      transform: translate(-50%, 0%);
+      opacity: 1;
+  }
+}
+
+@keyframes goToDownCardOne {
+  from {
+      transform: translate(-50%, 0%);
+      opacity: 1;
+  }
+  to {
+      transform: translate(-50%, 100%);
+      opacity: 0;
+  }
+}
+.cardContainer {
+  display: flex;
+  position: absolute;
+  top: 25%;
+  height: -webkit-fill-available;
+  width: 100%;
+  max-width: 1200px;
+  @media only screen and (max-width: 991px){
+      display:none;
+    }
+    &.hideCards {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+}
+
+.cardsWrapper {
+  position: relative;
+  display: flex;
+  margin: 20px;
+  height: calc(100% - 40px);
+  width: 100%;
+
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+   margin: 0px 20px 0px 20px;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    margin: 0px 20px 0px 20px;
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1024px) {
+    margin: 0px 20px 0px 20px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.cardsWrapper {
+  margin: 0px 20px 0px 20px;
+}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+.cardsWrapper {
+  margin: 0px 20px 0px 20px;
+}
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+.cardsWrapper {
+  margin: 0px 20px 0px 20px;
+}
+}
+
+
+
+.card1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 60px;
+  background-color:transparent;
+  display: flex;
+  transform: translate(-50%, 100%); /* Initial position off-screen */
+  width: calc(70% - 100px);
+  box-shadow: 0px 30px 90px 0px #16012d29;
+  background-color: rgb(31, 31, 31);
+  background-image: radial-gradient(rgb(160, 73, 252, 1), rgb(125 35 219));
+
+@media only screen and (max-width: 991px) {
+  box-shadow: none;
+  border-radius: 0;
+  background: rgb(165, 76, 254);
+}
+}
+
+.card2 {
+  position: absolute;
+  top:calc(60% - 40px + 100px);
+  left: 50%;
+  display: flex;
+  box-shadow: 0px 30px 90px 0px #16012d29;
+  border-radius: 60px;
+  background-color:transparent;
+  transform: translate(-50%, 100%); /* Initial position off-screen */
+  width: calc(70% - 100px);
+  box-shadow: 0px 30px 90px 0px #16012d29;
+  background-color: rgb(31, 31, 31);
+  background-image: linear-gradient(rgb(160, 73, 252, 1), rgb(89, 16, 166, 1));
+
+  @media only screen and (max-width: 991px) {
+    box-shadow: none;
+    border-radius: 0;
+    background: rgb(165, 76, 254);
+  }
+}
+.card1Come {
+  animation: goToUpCardOne 1s ease forwards;
+}
+.cardGoDown {
+  animation: goToDownCardOne 1s ease forwards;
+}
+
+@keyframes stackremoval {
+0%{
+transform:translateX(15px);
+}
+100%{
+  transform:translate(55px);
+
+}
+}
+.cardStackRemove{
+display: flex;
+flex-direction:column;
+top: 55%;
+ transition: top 0.1s ease;
+}
+
+.content, .imageContent {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  position: relative;
+  width: 50%;
+
+
+  align-items: center;
+}
+.content{
+  gap:170px;
+  justify-content: center;
+}
+
+.imageItem {
+  display: none;
+  height: 100%;
+  width: 100%;
+  font-size: 44px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.contentItem {
+  display: none;
+  z-index: 1;
+  width:100%;
+  gap:24px;
+  height: 48%;
+  transition: transform 2s ease, opacity 1s ease;
+}
+
+@keyframes slideUpAnimationContent {
+  from {
+    transform: translateY(0); 
+    opacity: 0.5; 
+  }
+  to {
+    transform: translateY(-40%);
+    opacity: 0; 
+  }
+}
+
+@keyframes slideDownAnimationContent {
+  from {
+    transform: translateY(25%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0; 
+  }
+}
+.fadeOutFirst{
+  display: flex;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  animation: slideUpAnimationContent 2s ease backwards; 
+}
+
+.fadeOutLast{
+  display: flex;
+  position: absolute;
+  top: 54%;
+  z-index: 1;
+  opacity: 0;
+  animation: slideDownAnimationContent 2s ease backwards; 
+}
+
+.firstContentUp{
+  display: flex;
+  z-index: 2;
+  animation: CardslideUpAnimation 2s ease forwards;
+}
+
+.secondContentUp{
+  display: flex;
+  animation: CardslideUpAnimation2 2s ease forwards;
+}
+.secondContentUpVisible{
+  display: flex;
+  animation: CardslideUpAnimationVisible 2s ease forwards;
+}
+.secondContentUpVisibleImagine{
+  display: flex;
+  opacity: 0;
+  animation: none;
+}
+
+@keyframes CardslideDownAnimation1 {
+  from {
+    transform: translateY(-50%); 
+    opacity: 0.3; 
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1; 
+  }
+}
+
+@keyframes CardslideDownAnimation2 {
+  from {
+    transform: translateY(-50%); 
+    opacity: 0.6; 
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 0.3; 
+  }
+}
+
+.firstContentDown{
+  display: flex;
+  z-index: 2;
+  animation: CardslideDownAnimation1 0.7s ease forwards;
+}
+
+.secondContentDown{
+  display: flex;
+  animation: CardslideDownAnimation2 0.7s ease forwards;
+}
+@keyframes scale-down-top {
+  0% {
+    transform: scale(1);
+    transform-origin: 50% 0%;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: 50% 0%;
+  }
+}
+
+@-webkit-keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+}
+@keyframes scale-up-bottom {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+}
+
+@keyframes TitleZoomin {
+  0% {
+    transition: 0.1s;
+    opacity:0.5;
+    transform: translateY(90%);
+  }
+  
+  100% {
+    transition: 0.1s;
+    opacity:1;
+    transform: translateY(0%);
+  }}
+
+  .animatePic{
+    @media only screen and (max-width: 479px) {
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-name: TitleZoomin;
+    }
+  }

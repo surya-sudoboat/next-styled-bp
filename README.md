@@ -1,52 +1,65 @@
-# NextJS Boilerplate
 
-This is a simple boilerplate with TypeScript, React, NextJS and Styled Components.
+# HashFame
 
-## Create your Own Project
+HashFame is a web application that serves as an open community where you can directly call or chat with over 70k+ verified influencers.
 
-<p align="center">
-  <img height="300" src="https://media.giphy.com/media/WXraj8aJHXUP7kRDbJ/giphy.gif" />
-</p>
+This project is built using Next.js for the core development, Styled Components for styling, ESLint for code linting, and Husky to ensure commits are free from errors and issues.
 
-Execute the following command to create your project:
-
-```bash
-npx create-next-app -e https://github.com/helderburato/nextjs-boilerplate
-
-# or
-
-yarn create next-app -e https://github.com/helderburato/nextjs-boilerplate
+## Application Setup
+To clone the repository, run the following command
+```sh
+git clone https://clone-repo-link
+```
+Go to the project directory
+```sh
+cd directory-name
+```
+Install dependencies
+```sh
+yarn
+```
+Command to run code 
+```sh
+yarn run dev
 ```
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
+Build command  (Build files will be stored under /out directory)
+```sh
+yarn run build-prod 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build file run command
+```sh
+yarn start
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Tech Stack
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+This project utilizes the following technologies and tools:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Our tech stack comprises Next js for server-side rendering and building static web applications, all managed efficiently with yarn.
 
-## Learn More
+- **Node** version - 20.10.0.
+- **Node Package Manager** (npm) version - 10.1.0.
+- **React.js** version - 17.0.2.
+- **Next.js** version - 12.0.9.
+- **Styled Components** version - 6.1.11.
+- **Eslint** version - 9.4.0.
+- **Husky** version - 9.0.11.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Modules In This Project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This project includes the following modules, each utilizing various technologies and tools:
 
-## Deploy on Vercel
+- **Header**
+- **Home page**
+- **About HashFame**
+- **Imagine a place**
+- **Informations about HashFame**
+- **Footer**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+

@@ -1,21 +1,311 @@
 {
-  "name": "App - Boilerplate",
-  "short_name": "App",
-  "icons": [
-    {
-      "src": "/img/icon-192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/img/icon-512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "background_color": "#06092B",
-  "description": "Boilerplate with TypeScript, React, NextJS and Styled Components.",
-  "display": "fullscreen",
-  "start_url": "/",
-  "theme_color": "#06092B"
-}
+    "short_name": "HashFame",
+    "name": "HashFame",
+    "images": [
+      {
+        "src": "/assets/aboutContentImages/arrow.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/aboutContentImages/chat.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/aboutContentImages/hash.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/aboutContentImages/influencers.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/aboutContentImages/talentManagers.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/agency/Facebook-grey.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/Insta-grey.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/monkey.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/pointArrow.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/rightArrow-grey.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/social.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/sorted.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/Twitter-grey.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/agency/world.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/commonImages/closeIcon.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/arts.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/automation.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/beauty.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/entertainment.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/fashion.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/finance.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/fitness.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/food.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/gaming.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/health.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/home.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/lifestyle.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/parenting.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/photographer.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/professionals.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/qr.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/sports.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/tech.svg",
+        "type": "image/svg"
+      },{
+        "src": "/assets/creatorCategoryImages/travel.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/coloredInstagram.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/coloredLinkedin.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/coloredTwitter.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/doodle.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/footer-mockup.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/footer/instagram.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/linkedin.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/play-store-logo.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/footer/qr-bg.png",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/footer/titter.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/blackLogo.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/blackLogoSymbol.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/call.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/Group.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/influencer1.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/influencer2.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/influencer3.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/influencer4.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/influencer5.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/influencer6.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/logo.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/logosymbol.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/HeroImages/mobile.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/HeroImages/whatsapp.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/imagineCard/imagineImg1.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/imagineCard/imagineImg2.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/imagineCard/imagineImg3.avif",
+        "type": "image/avif"
+      },
+      {
+        "src": "/assets/imagineCard/rightArrow.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/DevanshKamboj.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/instagramIcon.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/IsaKhan.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/kangan.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/KumariSuprava.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/VaishnaviPrakash.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/influencers/vedioIcon.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/scannerModal/appStore.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/scannerModal/brands.png",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/scannerModal/logo.png",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/scannerModal/playStore.png",
+        "type": "image/png"
+      },
+      {
+        "src": "/assets/scannerModal/qr.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/scannerModal/scannerInfoDoodle.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/scannerModal/star.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/scannerModal/upArrow.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/topics/language.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/topics/location.svg",
+        "type": "image/svg"
+      },
+      {
+        "src": "/assets/topics/sports.svg",
+        "type": "image/svg"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "theme_color": "#000000"
+  }
